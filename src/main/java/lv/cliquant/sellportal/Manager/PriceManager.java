@@ -33,7 +33,7 @@ public class PriceManager {
     }
 
     public static double getItemPrice(ItemStack item) {
-        if (Main.getInstance().getConfig().getBoolean("sell.hooks.shopguiplus")) {
+        if (Main.getInstance().getConfig().getString("sell.pricesource").equalsIgnoreCase("shopguiplus")) {
             double price = ShopGuiPlusApi.getItemStackPriceSell(item);
             if (price == -1.0) {
                 return 0.0;
