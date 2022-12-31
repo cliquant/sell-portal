@@ -19,8 +19,6 @@ public class PlayerManager {
 
     public static void updateBalance(String player, double amount) {
         OfflinePlayer target = Bukkit.getOfflinePlayer(player);
-
         HookManager.econ.depositPlayer(target, amount);
-        Bukkit.broadcastMessage("test3");
     }
 }
