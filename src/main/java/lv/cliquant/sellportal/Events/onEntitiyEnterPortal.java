@@ -54,12 +54,10 @@ public class onEntitiyEnterPortal implements Listener {
         Item item = (Item) event.getEntity();
         ItemStack itemStack = item.getItemStack();
         if(PriceManager.getItemPrice(itemStack) == 0.0) {
-            Bukkit.broadcastMessage("test1");
             Bukkit.getPlayer(item.getThrower()).getInventory().addItem(itemStack);
             item.remove();
         }
         if(PriceManager.getItemPrice(itemStack) != 0.0) {
-            Bukkit.broadcastMessage("test2");
             item.remove();
             PlayerManager.updateBalance(container.get(sellPortalOwnerKey, PersistentDataType.STRING), PriceManager.getItemPrice(itemStack));
             SellPortalManager.addMoneyToPortalBalance(container.get(sellPortalNumberKey, PersistentDataType.STRING), container.get(sellPortalOwnerKey, PersistentDataType.STRING), PriceManager.getItemPrice(itemStack));
