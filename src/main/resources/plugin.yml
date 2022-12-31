@@ -3,8 +3,8 @@ version: '${project.version}'
 main: lv.cliquant.sellportal.Main
 api-version: 1.13
 authors: [ cliquant ]
-softdepend: [ShopGUIPlus, HolographicDisplays, Vault, PlaceholderAPI]
-description: SellPortal which sells items when drop them in portal and sends to portal owner balance!
+softdepend: [ShopGUIPlus, HolographicDisplays, DecentHolograms, Vault, PlaceholderAPI]
+description: 5x5 Portal which sell dropped item in portal and sends to portal owner balance.
 commands:
   sellportal:
     usage: /<command>
