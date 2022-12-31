@@ -10,7 +10,7 @@ public class HookManager {
 
     public static Economy econ;
 
-    public static HolographicDisplaysAPI api;
+    public static int HologramHook;
     public static void load() {
         if (Bukkit.getServer().getPluginManager().isPluginEnabled("Vault")) {
             Main.getInstance().getLogger().info("*** Hooked in to Vault ***");
@@ -18,10 +18,27 @@ public class HookManager {
             econ = rsp.getProvider();
         }
         if (Bukkit.getServer().getPluginManager().isPluginEnabled("HolographicDisplays")) {
-            Main.getInstance().getLogger().info("*** Hooked in to HolographicDisplays ***");
-            api = HolographicDisplaysAPI.get(Main.getInstance());
+            if(Main.getInstance().getConfig().getString("portal.hologram.hook").equals("holographicdisplays")) {
+                Main.getInstance().getLogger().info("*** Hooked in to HolographicDisplays ***");
+                HologramHook = 1;
+            }
         }
-        if (Bukkit.getServer().getPluginManager().isPluginEnabled("ShopGuiPlus")) {
+        if(Bukkit.getServer().getPluginManager().isPluginEnabled("DecentHolograms")) {
+            if(Main.getInstance().getConfig().getString("portal.hologram.hook").equals("decentholograms")) {
+                Main.getInstance().getLogger().info("*** Hooked in to DecentHolograms ***");
+                HologramHook = 2;
+            }
+        }
+
+        if(!Main.getInstance().getConfig().getString("portal.hologram.hook").equals("holographicdisplays") && !Main.getInstance().getConfig().getString("portal.hologram.hook").equals("decentholograms")) {
+            Main.getInstance().getLogger().info(" ");
+            Main.getInstance().getLogger().info("*** Your config hologram hook is wrong and not loaded. ***");
+            Main.getInstance().getLogger().info("*** This plugin will be disabled. ***");
+            Bukkit.getServer().getPluginManager().disablePlugin(Main.getInstance());
+            return;
+        }
+
+        if (Bukkit.getServer().getPluginManager().isPluginEnabled("ShopGUIPlus")) {
             if (Main.getInstance().getConfig().getBoolean("sell.hooks.shopguiplus")) {
                 Main.getInstance().getLogger().info("*** Hooked in to ShopGuiPLus ***");
             }
@@ -39,14 +56,26 @@ public class HookManager {
             return;
         }
         if (!Bukkit.getServer().getPluginManager().isPluginEnabled("HolographicDisplays")) {
-            Main.getInstance().getLogger().info(" ");
-            Main.getInstance().getLogger().info("*** HolographicDisplays is not installed or not enabled. ***");
-            Main.getInstance().getLogger().info("*** This plugin will be disabled. ***");
-            Main.getInstance().getLogger().info(" ");
-            Bukkit.getServer().getPluginManager().disablePlugin(Main.getInstance());
-            return;
+            if(Main.getInstance().getConfig().getString("portal.hologram.hook").equals("holographicdisplays")) {
+                Main.getInstance().getLogger().info(" ");
+                Main.getInstance().getLogger().info("*** HolographicDisplays is not installed or not enabled. ***");
+                Main.getInstance().getLogger().info("*** This plugin will be disabled. ***");
+                Main.getInstance().getLogger().info(" ");
+                Bukkit.getServer().getPluginManager().disablePlugin(Main.getInstance());
+                return;
+            }
         }
-        if (!Bukkit.getServer().getPluginManager().isPluginEnabled("ShopGuiPlus")) {
+        if (!Bukkit.getServer().getPluginManager().isPluginEnabled("DecentHolograms")) {
+            if(Main.getInstance().getConfig().getString("portal.hologram.hook").equals("decentholograms")) {
+                Main.getInstance().getLogger().info(" ");
+                Main.getInstance().getLogger().info("*** DecentHolograms is not installed or not enabled. ***");
+                Main.getInstance().getLogger().info("*** This plugin will be disabled. ***");
+                Main.getInstance().getLogger().info(" ");
+                Bukkit.getServer().getPluginManager().disablePlugin(Main.getInstance());
+                return;
+            }
+        }
+        if (!Bukkit.getServer().getPluginManager().isPluginEnabled("ShopGUIPlus")) {
             if (Main.getInstance().getConfig().getString("sell.pricesource").equalsIgnoreCase("shopguiplus")) {
                 Main.getInstance().getLogger().info(" ");
                 Main.getInstance().getLogger().info("*** ShopGuiPlus is not installed or not enabled. ***");
