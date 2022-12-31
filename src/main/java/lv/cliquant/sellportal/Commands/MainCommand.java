@@ -1,5 +1,7 @@
 package lv.cliquant.sellportal.Commands;
 
+import eu.decentsoftware.holograms.api.DHAPI;
+import eu.decentsoftware.holograms.api.holograms.Hologram;
 import lv.cliquant.license.License;
 import lv.cliquant.sellportal.Main;
 import lv.cliquant.sellportal.Manager.*;
@@ -9,6 +11,9 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class MainCommand implements CommandExecutor {
     @Override
