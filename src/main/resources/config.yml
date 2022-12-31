@@ -15,15 +15,16 @@ portal:
       - "&7&o( Place it somewhere to generate Sell Portal. )"
       - ""
   hologram:
+    hook: "decentholograms" # decentholograms or holographicdisplays
     lines:
       - "&2&lSELL PORTAL"
-      - "&7&o( Churns items into {owner}'s balance. )"
+      - "&7&o( Churns items into {owner}&7&o's balance. )"
       - "&2Value sold: &f${totalsold} &7Sice Reboot"
   guis:
     rightclick:
       title: "&2SellPortal"
       size: 27 # 9, 18, 27, 36, 45 and 54
-      filler: "BLACK_STAINED_GLASS_PANE" # Use "NONE" if want empty.
+      filler: "BLACK_STAINED_GLASS_PANE" # Use "NONE" if you want empty.
       items: # ( remove-sellportal is required [don't rename the key] )
         main:
           title: "&2About"
@@ -60,4 +61,4 @@ messages:
 
 update-checker: true
 
-version: 1.1 # dont touch.
+version: 1.2 # dont touch.
