@@ -1,8 +1,11 @@
 package lv.cliquant.sellportal;
 
+import eu.decentsoftware.holograms.api.DHAPI;
 import lv.cliquant.sellportal.Commands.MainCommand;
 import lv.cliquant.sellportal.Events.*;
 import lv.cliquant.sellportal.Manager.*;
+import me.filoghost.holographicdisplays.api.HolographicDisplaysAPI;
+import me.filoghost.holographicdisplays.api.hologram.Hologram;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -61,7 +64,19 @@ public final class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        HookManager.api.deleteHolograms();
+        if(HookManager.HologramHook == 1) {
+            SellPortalManager.sellPortals1.forEach((key, value) -> {
+                value.delete();
+            });
+            SellPortalManager.sellPortals2.clear();
+        }
+        if(HookManager.HologramHook == 2) {
+            SellPortalManager.sellPortals2.forEach((key, value) -> {
+                value.delete();
+            });
+            SellPortalManager.sellPortals2.clear();
+        }
+        SellPortalManager.soldSinceReboot.clear();
         getLogger().info("*** Unloading all portals ***");
         getLogger().info("*** Plugin has been unloaded succesffully ***");
     }
