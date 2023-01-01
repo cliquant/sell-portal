@@ -1,5 +1,7 @@
 package lv.cliquant.sellportal.Manager;
 
+import com.earth2me.essentials.Essentials;
+import com.earth2me.essentials.IEssentials;
 import lv.cliquant.sellportal.Main;
 import lv.cliquant.sellportal.Other.Utils;
 import me.filoghost.holographicdisplays.api.hologram.Hologram;
@@ -39,6 +41,13 @@ public class PriceManager {
                 return 0.0;
             } else {
                 return price;
+            }
+        } else if(Main.getInstance().getConfig().getString("sell.pricesource").equalsIgnoreCase("essentials")) {
+            IEssentials essentials = (Essentials) Bukkit.getServer().getPluginManager().getPlugin("Essentials");
+            if(essentials.getWorth().getPrice(essentials, item) == null) {
+                return 0.0;
+            } else {
+                return Double.parseDouble(String.valueOf(essentials.getWorth().getPrice(essentials, item))) * item.getAmount();
             }
         } else {
             return getConfigPrice(item, item.getAmount());
