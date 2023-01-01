@@ -39,14 +39,28 @@ public class HookManager {
         }
 
         if (Bukkit.getServer().getPluginManager().isPluginEnabled("ShopGUIPlus")) {
-            if (Main.getInstance().getConfig().getBoolean("sell.hooks.shopguiplus")) {
+            if (Main.getInstance().getConfig().getString("sell.pricesource").equalsIgnoreCase("shopguiplus")) {
                 Main.getInstance().getLogger().info("*** Hooked in to ShopGuiPLus ***");
+            }
+        }
+        if (Bukkit.getServer().getPluginManager().isPluginEnabled("Essentials")) {
+            if (Main.getInstance().getConfig().getString("sell.pricesource").equalsIgnoreCase("essentials")) {
+                Main.getInstance().getLogger().info("*** Hooked in to Essentials ***");
             }
         }
         if (Bukkit.getServer().getPluginManager().isPluginEnabled("PlaceholderAPI")) {
             Main.getInstance().getLogger().info("*** Hooked in to PlaceholderAPI ***");
         }
-
+        if (!Bukkit.getServer().getPluginManager().isPluginEnabled("Essentials")) {
+            if (Main.getInstance().getConfig().getString("sell.pricesource").equalsIgnoreCase("essentials")) {
+                Main.getInstance().getLogger().info(" ");
+                Main.getInstance().getLogger().info("*** Essentials is not installed or not enabled. ***");
+                Main.getInstance().getLogger().info("*** This plugin will be disabled. ***");
+                Main.getInstance().getLogger().info(" ");
+                Bukkit.getServer().getPluginManager().disablePlugin(Main.getInstance());
+                return;
+            }
+        }
         if (!Bukkit.getServer().getPluginManager().isPluginEnabled("Vault")) {
             Main.getInstance().getLogger().info(" ");
             Main.getInstance().getLogger().info("*** Vault is not installed or not enabled. ***");
