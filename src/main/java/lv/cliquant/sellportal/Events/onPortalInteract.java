@@ -11,6 +11,7 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.persistence.PersistentDataContainer;
@@ -46,6 +47,10 @@ public class onPortalInteract implements Listener {
                 return;
             } else {
                 if (event.getHand().equals(EquipmentSlot.OFF_HAND)) {
+                    event.setCancelled(true);
+                    return;
+                }
+                if (event.getHand().equals(Action.RIGHT_CLICK_BLOCK)) {
                     event.setCancelled(true);
                     return;
                 }
