@@ -81,6 +81,14 @@
 
     <repositories>
         <repository>
+            <id>essentials-releases</id>
+            <url>https://repo.essentialsx.net/releases/</url>
+        </repository>
+        <repository>
+            <id>paper-repo</id>
+            <url>https://papermc.io/repo/repository/maven-public/</url>
+        </repository>
+        <repository>
             <id>placeholderapi</id>
             <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
@@ -107,6 +115,12 @@
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>net.essentialsx</groupId>
+            <artifactId>EssentialsX</artifactId>
+            <version>2.19.0</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>com.github.decentsoftware-eu</groupId>
             <artifactId>decentholograms</artifactId>
