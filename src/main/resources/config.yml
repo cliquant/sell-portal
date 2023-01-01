@@ -4,7 +4,7 @@ sell:
   prices:
     - "STONE:5.0"
     - "DIRT:5.0"
-  pricesource: "shopguiplus" # shopguiplus or config.
+  pricesource: "shopguiplus" # shopguiplus | config | essentials.
 
 portal:
   item:
