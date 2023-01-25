@@ -4,6 +4,7 @@ https://user-images.githubusercontent.com/42009476/214687602-58b4bd75-3b70-4306-
 
 ![alts](https://i.imgur.com/T4m74uw.png)
 
+```
 /sellportal - sellportal.command
 
 /sellportal give <player name> (required to be online) - sellportal.give
@@ -11,8 +12,7 @@ https://user-images.githubusercontent.com/42009476/214687602-58b4bd75-3b70-4306-
 /sellportal reload (config/portals/all) - sellportal.reload
 
 Place Sell Portal - sellportal.place[/CODE]
-
-
+```
 
 ![asdasd](https://i.imgur.com/4sdwU7n.png)
 
@@ -150,7 +150,7 @@ version: 1.2 # dont touch.
 
 ![alts](https://i.imgur.com/1jtcBnm.png)
 
-
+```
 - ShopGuiPlus
 
 - Vault
@@ -170,7 +170,7 @@ Dependencies:  HolographicDisplaysApi or DecentHolograms, Vault
 
 
 If you don't see a plugin on the list and want compatibility added, contact me!
-
+```
 
 
 ![alts]()
