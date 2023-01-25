@@ -1,5 +1,4 @@
-1670965944555.png
-[MEDIA=imgur]gmvJ0hn[/MEDIA]
+[MEDIA=imgur]gmvJ0hn[/MEDIA]](https://builtbybit.com/attachments/1670965944555-png.556206/)
 
 
 
