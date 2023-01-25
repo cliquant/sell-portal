@@ -1,6 +1,6 @@
 ![alts](https://i.imgur.com/u72wkSv.png)
 
-![preview](https://i.imgur.com/gmvJ0hn.mp4)
+https://user-images.githubusercontent.com/42009476/214687602-58b4bd75-3b70-4306-8902-ea91960d26d5.mp4
 
 ![alts](https://i.imgur.com/T4m74uw.png)
 
@@ -175,6 +175,6 @@ If you don't see a plugin on the list and want compatibility added, contact me!
 
 ![alts]()
 
-
-
-DOCS | DISCORD
+https://discord.cliquant.lol
+  
+https://docs.cliquant.lol
