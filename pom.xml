@@ -11,7 +11,7 @@
 
     <name>SellPortal</name>
 
-    <description>SellPortal which sells items when drop them in portal and sends to portal owner balance!</description>
+    <description>5x5 Portal which sell dropped item in portal and sends to portal owner balance</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
