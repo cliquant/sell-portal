@@ -1,4 +1,4 @@
-[MEDIA=imgur]gmvJ0hn[/MEDIA]](https://builtbybit.com/attachments/1670965944555-png.556206/)
+![1234](http://url/to/img.png](https://builtbybit.com/attachments/1670966028853-png.556207/)
 
 
 
