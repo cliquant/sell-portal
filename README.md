@@ -1,26 +1,24 @@
-![1234](http://url/to/img.png](https://builtbybit.com/attachments/1670966028853-png.556207/)
+![alts](https://i.imgur.com/u72wkSv.png)
 
+![preview](https://i.imgur.com/gmvJ0hn.mp4)
 
+![alts](https://i.imgur.com/T4m74uw.png)
 
-1670966028853.png
-
-[CODE]/sellportal - sellportal.command
+/sellportal - sellportal.command
 
 /sellportal give <player name> (required to be online) - sellportal.give
 
 /sellportal reload (config/portals/all) - sellportal.reload
 
-
-
 Place Sell Portal - sellportal.place[/CODE]
 
 
 
-1670966081260.png
+![asdasd](https://i.imgur.com/4sdwU7n.png)
 
 
-
-[CODE=yaml]#sellportal by cliquant.
+```
+#sellportal by cliquant.
 
 
 
@@ -146,13 +144,12 @@ update-checker: true
 
 
 
-version: 1.2 # dont touch.[/CODE]
+version: 1.2 # dont touch.
+```
 
 
+![alts](https://i.imgur.com/1jtcBnm.png)
 
-1670966687548.png
-
-[CODE]
 
 - ShopGuiPlus
 
@@ -172,12 +169,12 @@ Dependencies:  HolographicDisplaysApi or DecentHolograms, Vault
 
 
 
-If you don't see a plugin on the list and want compatibility added, contact me![/CODE]
+If you don't see a plugin on the list and want compatibility added, contact me!
 
 
 
-1670966761790.png
+![alts]()
 
 
 
-1671047204006.png1671047220490.png
+DOCS | DISCORD
