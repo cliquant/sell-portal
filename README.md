@@ -173,7 +173,7 @@ If you don't see a plugin on the list and want compatibility added, contact me!
 ```
 
 
-![alts]()
+![alts](https://i.imgur.com/xR7WGZE.png)
 
 https://discord.cliquant.lol
   
