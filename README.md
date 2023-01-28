@@ -1,3 +1,4 @@
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fcliquant%2Fsell-portal&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
 ![alts](https://i.imgur.com/u72wkSv.png)
 
 https://user-images.githubusercontent.com/42009476/214687602-58b4bd75-3b70-4306-8902-ea91960d26d5.mp4
